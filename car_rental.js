@@ -104,8 +104,14 @@ var Vendor = function(name) {
     }
   }
 this.availableCars = function (){
-  function(car){
-
+    return this.cars.filter(function(car) {
+      if (car.available === true) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    });
 
   };
 }
@@ -114,7 +120,7 @@ this.rentCar = function (customerID, rentalDuration){
     console.log('All our cars have been rented');
   } else {
     if (this.getCustomer(customerID)){
-
+      var car = cars
     }
   }
 }
